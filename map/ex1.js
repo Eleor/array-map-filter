@@ -20,10 +20,17 @@ En sortie: [
 ]
 
  */
+const animaux = ['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard'];
 
-function getStringsLength(strings) {
-}
+const nombreDeChars = animaux.map(function getStringsLength(strings) {
+			return strings.length;
+	 })
+console.log(getStringsLength(animaux));
 
+for (i=0; i<animaux.length ; i++){
+	
+alert (animaux[i] + ' contains ' + nombreDeChars[i] + ' characters');
+}           
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
 // console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
