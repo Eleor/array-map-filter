@@ -24,8 +24,8 @@ const animaux = ['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard'];
 
 const nombreDeChars = animaux.map(function getStringsLength(strings) {
 			return strings.length;
-	 })
-console.log(getStringsLength(animaux));
+	 });
+console.log(nombreDeChars);
 
 for (i=0; i<animaux.length ; i++){
 	
