@@ -41,6 +41,7 @@ En sortie: [
 ]
 
  */
+
 const foods =   [
     {
       food: 'Bacon',
@@ -59,17 +60,20 @@ const foods =   [
       isVegetarian: true
     }
   ];
- const foodsSuitability = foods.map(function getFoodCategories(foodName, veggiBoolean) {
-			if (veggiBoolean){
-				return ( foodName + ' is suitable for vegetarians');
+ const foodsSuitability = foods.map(function getFoodCategories(foodTableau){
+			if (foodTableau.isVegetarian == true){
+				return (foodTableau.food + ' is suitable for vegetarians');
 			}else{
-				return (foodName + ' is not suitable for vegetarians');
+				return (foodTableau.food + ' is not suitable for vegetarians');
 			}
 });
 console.log(foodsSuitability);
 
 for(i=0;i<foodsSuitability.length;i++){
-	alert foodsSuitability[i];
+	alert (foodsSuitability[i]);
 }
 // Ne pas modifier l'export
 module.exports = getFoodCategories;
+
+
+
