@@ -50,8 +50,21 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
   }
 ]
 */
-
-function getCirclesProperties(radiuses) {
+const radiuses = [1, 3, 4.5, 7];
+const circlesProperties = radiuses.map(function getCirclesProperties(radius) 
+	{
+		const circum = (2*Math.PI*radius);
+		const surf = (Math.PI*radius*radius);
+		return {
+			radius: radius,
+			circumference: circum.toFixed(3),
+			surface: surf.toFixed(3)
+			}	
+	});
+	
+console.log(circlesProperties);
+for (i=0; i<circlesProperties.length; i++){
+	alert(circlesProperties[i].radius + ' ' + circlesProperties[i].circumference + ' ' + circlesProperties[i].surface);
 }
 
 
