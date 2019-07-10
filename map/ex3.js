@@ -58,10 +58,56 @@ En sortie:
   ]
 
  */
-
-function getMoviesFreshness(movies) {
+ 
+ const movies =
+   [
+    {
+      name: 'Children of paradise',
+      rating: 50
+    },
+    {
+      name: 'Happy Together',
+      rating: 60
+    },
+    {
+      name: 'Death proof',
+      rating: 65
+    },
+    {
+      name: 'Brazil',
+      rating: 80
+    }
+  ];
+  let freshness;
+  const moviesWithFreshness = movies.map(function getMoviesFreshness(movieTab) 
+  {
+		
+	  if (movieTab.rating >=75){
+		 return {
+			 name:movieTab.name, 
+			 rating:movieTab.rating,
+			 freshness:'certified fresh' 
+		 };
+	  }
+	  if ((movieTab.rating>=60) & (movieTab.rating < 75)){
+		  return {
+			name:movieTab.name, 
+			 rating:movieTab.rating,
+			 freshness:'fresh' 
+		 };
+	  }
+	  if (movieTab.rating < 60){
+		  return {
+			name:movieTab.name, 
+			 rating:movieTab.rating,
+			 freshness:'rotten' 
+		 };
+	  }
+});
+console.log(moviesWithFreshness);
+for (i=0;i<moviesWithFreshness.length; i++){
+	alert (moviesWithFreshness[i].name + moviesWithFreshness[i].rating + moviesWithFreshness[i].freshness);
 }
-
 
 
 // Ne pas modifier l'export
